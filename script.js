@@ -1,11 +1,17 @@
 
 $("form").on("submit", function (evt) {
-
-  console.log('form submitted');
-  console.log(evt);
   evt.preventDefault();
 
-  $newParagraph = (`<p>The movie is called ${$("#movie-title").val()} and its rating is ${$('#movie-rating').val()}</p>`);
+  let $newMovie =
+    (`<div>
+    <p>The movie is called ${$("#movie-title").val()} and its rating is ${$('#movie-rating').val()}</p>
+    <button id="delete-button">Delete Movie</button>
+    </div>
+    `);
 
-  $('.movie-container').append($newParagraph);
+  $('.movie-container').append($newMovie);
+});
+
+$(".movie-container").on("click", "button", function (evt) {
+  $(evt.target).parent().remove();
 });
