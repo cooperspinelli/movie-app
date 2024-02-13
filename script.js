@@ -1,9 +1,10 @@
+"use strict";
 
 $("form").on("submit", function (evt) {
   evt.preventDefault();
 
   let $newMovie =
-    (`<div>
+    $(`<div>
     <p>The movie is called ${$("#movie-title").val()} and its rating is ${$('#movie-rating').val()}</p>
     <button id="delete-button">Delete Movie</button>
     </div>
