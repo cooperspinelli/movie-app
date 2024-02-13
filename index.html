@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
   <title>Movie App</title>
 </head>
+
 <body>
 
   <form action="submit">
 
     <label for="movie-title">Movie Title</label>
-    <input type="text" name="movie-title">
+    <input type="text" name="movie-title" id="movie-title">
 
     <label for="movie-rating">Rating</label>
-    <select name="movie-rating">
+    <select name="movie-rating" id="movie-rating">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -29,6 +33,9 @@
     <button>Submit</button>
   </form>
 
-  <script src="script.js"></script>
+  <div class="movie-container"></div>
+
+  <script src="script.js">  </script>
 </body>
+
 </html>
